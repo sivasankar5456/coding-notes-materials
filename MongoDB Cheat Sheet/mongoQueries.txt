@@ -1,0 +1,12 @@
+
+db.employee.find({empid: {$eq: 1001}})
+
+db.employee.find({salary: {$gt: 25000}})
+
+db.employee.find({name: {$in: ['Md Ali', 'Bala']}})
+
+db.employee.find({name: {$nin: ['Md Ali', 'Malli']}})
+
+db.employee.find({$and: [{married: {$eq: true}}, {experience: {$eq: 5}}]})
+
+db.employee.find({$and: [{married: {$eq: false}}, {experience: {$lte: 5}}]})
